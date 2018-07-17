@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="twitter_login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wEQ-4t-nwz">
+                                <rect key="frame" x="30" y="278.5" width="315" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXV-So-u1F">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
+                                        <color key="backgroundColor" red="0.51427664969999998" green="0.51427664969999998" blue="0.51427664969999998" alpha="0.43822238870000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Twitter"/>
+                                        <connections>
+                                            <action selector="twitterButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9pt-lD-B4l"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5s-25-qAX">
+                                        <rect key="frame" x="0.0" y="40" width="315" height="30"/>
+                                        <color key="backgroundColor" red="0.51427664969999998" green="0.51427664969999998" blue="0.51427664969999998" alpha="0.43822238870000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Facebook"/>
+                                        <connections>
+                                            <action selector="facebookButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DMx-KQ-AfF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyf-Cb-LsS">
+                                        <rect key="frame" x="0.0" y="80" width="315" height="30"/>
+                                        <color key="backgroundColor" red="0.51427664969999998" green="0.51427664969999998" blue="0.51427664969999998" alpha="0.43822238870000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Google"/>
+                                        <connections>
+                                            <action selector="googleButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LWv-Xu-3rR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wEQ-4t-nwz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4G8-Ks-QFG"/>
+                            <constraint firstItem="wEQ-4t-nwz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XIh-Vu-gjq"/>
+                            <constraint firstItem="wEQ-4t-nwz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eZ2-Hy-9UF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wEQ-4t-nwz" secondAttribute="trailing" constant="30" id="n2I-Xg-tGv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
