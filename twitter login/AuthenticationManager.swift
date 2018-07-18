@@ -11,12 +11,16 @@ import GoogleSignIn
 import SwiftyJSON
 import FBSDKLoginKit
 import TwitterKit
+import Alamofire
+import OAuthSwift
 
 class AuthenticationManager: NSObject {
     static let shared = AuthenticationManager()
     let fbLoginManager = FBSDKLoginManager()
     var googleDelegate: GoogleSignInDelegate?
     var onGoogleLoginSuccess: (()->Void)?
+    var oauthswift: OAuthSwift?
+    
     override init() {
         super.init()
         GIDSignIn.sharedInstance().delegate = self
@@ -79,6 +83,27 @@ class AuthenticationManager: NSObject {
         })
     }
 
+    func gitHubLogIn() {
+        let oauthswift = OAuth2Swift(
+            consumerKey:    Config.githubKey,
+            consumerSecret: Config.githubSecret,
+            authorizeUrl:   "https://github.com/login/oauth/authorize",
+            accessTokenUrl: "https://github.com/login/oauth/access_token",
+            responseType:   "code"
+        )
+        self.oauthswift = oauthswift
+        let state = generateState(withLength: 20)
+        let _ = oauthswift.authorize(
+            withCallbackURL: URL(string: "oauth-swift://oauth-callback/github")!, scope: "user,repo", state: state,
+            success: { credential, response, parameters in
+                print("success \(credential)")
+        },
+            failure: { error in
+                print(error.description)
+        }
+        )
+    }
+    
 }
 
 extension AuthenticationManager: GIDSignInDelegate {
@@ -111,7 +136,11 @@ extension AuthenticationManager: GIDSignInUIDelegate {
     func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
         googleDelegate?.googleSignInDismiss(viewController)
     }
+    
+    
 }
+
+
 
 
 

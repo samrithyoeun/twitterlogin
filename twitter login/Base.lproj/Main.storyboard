@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wEQ-4t-nwz">
-                                <rect key="frame" x="30" y="278.5" width="315" height="110"/>
+                                <rect key="frame" x="30" y="258.5" width="315" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXV-So-u1F">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
@@ -43,6 +43,14 @@
                                         <state key="normal" title="Google"/>
                                         <connections>
                                             <action selector="googleButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LWv-Xu-3rR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID9-fU-GPO">
+                                        <rect key="frame" x="0.0" y="120" width="315" height="30"/>
+                                        <color key="backgroundColor" red="0.51427664969999998" green="0.51427664969999998" blue="0.51427664969999998" alpha="0.43822238870000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Github"/>
+                                        <connections>
+                                            <action selector="gitHubButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xir-Fh-hMc"/>
                                         </connections>
                                     </button>
                                 </subviews>

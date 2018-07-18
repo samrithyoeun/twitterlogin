@@ -8,9 +8,12 @@
 
 import UIKit
 import TwitterKit
+import OAuthSwift
 
 class ViewController: UIViewController {
-
+    
+    var oauthswift: OAuthSwift?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         AuthenticationManager.shared.googleDelegate = self
@@ -30,6 +33,10 @@ class ViewController: UIViewController {
     
     @IBAction func twitterButtonTapped(_ sender: Any) {
         AuthenticationManager.shared.twitterLogin()
+    }
+    
+    @IBAction func gitHubButtonTapped(_ sender: Any) {
+        AuthenticationManager.shared.gitHubLogIn()
     }
     
 }
