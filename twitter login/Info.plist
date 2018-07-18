@@ -16,18 +16,16 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-    <key>LIAppId</key>
-    <string>5294165</string>
-
+	<key>LIAppId</key>
+	<string>5294165</string>
 	<key>CFBundleURLTypes</key>
 	<array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>li5294165</string>
-            </array>
-        </dict>
-
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>li5294165</string>
+			</array>
+		</dict>
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
@@ -67,6 +65,9 @@
 	<string>twitter login</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>linkedin</string>
+		<string>linkedin-sdk2</string>
+		<string>linkedin-sdk</string>
 		<string>fb267402570507604</string>
 		<string>twitter</string>
 		<string>twitterauth</string>
@@ -94,29 +95,24 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>linkedin</string>
-        <string>linkedin-sdk2</string>
-        <string>linkedin-sdk</string>
-        <string>fb267402570507604</string>
-        <string>twitter</string>
-        <string>twitterauth</string>
-    </array>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSExceptionDomains</key>
-        <dict>
-            <key>linkedin.com</key>
-            <dict>
-                <key>NSExceptionAllowsInsecureHTTPLoads</key>
-                <true/>
-                <key>NSIncludesSubdomains</key>
-                <true/>
-                <key>NSExceptionRequiresForwardSecrecy</key>
-                <false/>
-            </dict>
-        </dict>
-    </dict>
+	<key>InstagramClientId</key>
+	<string>76cab302605e42b7aa488ee1d4480f01</string>
+	<key>InstagramRedirectURI</key>
+	<string>0e3875de28484c7cb6af054ac87f2ba5</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>linkedin.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>
