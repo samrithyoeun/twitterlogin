@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		411155029C1F95A3F0D5E31D /* Pods_twitter_login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D53B1E1A6D4990BD4BB56F /* Pods_twitter_login.framework */; };
+		53B05D3620FED04600F11E26 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53B05D3520FED04600F11E26 /* credentials.plist */; };
 		CDBD909D20FE1A180018C26A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD909C20FE1A180018C26A /* User.swift */; };
 		CDBD90A020FE1B530018C26A /* GoogleSignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD909E20FE1B530018C26A /* GoogleSignInDelegate.swift */; };
 		CDBD90A120FE1B530018C26A /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD909F20FE1B530018C26A /* AuthenticationManager.swift */; };
 		CDBD90A520FE1B900018C26A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD90A420FE1B900018C26A /* Result.swift */; };
-		CDD4102820FE4ABE00E1852D /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDD4102720FE4ABE00E1852D /* credentials.plist */; };
 		CDF9DE1F20FE055100EDD552 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9DE1E20FE055100EDD552 /* AppDelegate.swift */; };
 		CDF9DE2120FE055100EDD552 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9DE2020FE055100EDD552 /* ViewController.swift */; };
 		CDF9DE2420FE055100EDD552 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF9DE2220FE055100EDD552 /* Main.storyboard */; };
@@ -24,12 +24,12 @@
 
 /* Begin PBXFileReference section */
 		272C7D427FD3853BD68E922B /* Pods-twitter login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter login.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twitter login/Pods-twitter login.debug.xcconfig"; sourceTree = "<group>"; };
+		53B05D3520FED04600F11E26 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		7D7E9E6FD1A3AB7966422F63 /* Pods-twitter login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter login.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitter login/Pods-twitter login.release.xcconfig"; sourceTree = "<group>"; };
 		CDBD909C20FE1A180018C26A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CDBD909E20FE1B530018C26A /* GoogleSignInDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleSignInDelegate.swift; sourceTree = "<group>"; };
 		CDBD909F20FE1B530018C26A /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		CDBD90A420FE1B900018C26A /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		CDD4102720FE4ABE00E1852D /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = credentials.plist; path = ../../../../Downloads/credentials.plist; sourceTree = "<group>"; };
 		CDF9DE1B20FE055100EDD552 /* twitter login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "twitter login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF9DE1E20FE055100EDD552 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF9DE2020FE055100EDD552 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,8 +95,8 @@
 				CDF9DE2220FE055100EDD552 /* Main.storyboard */,
 				CDF9DE2520FE055200EDD552 /* Assets.xcassets */,
 				CDF9DE2720FE055200EDD552 /* LaunchScreen.storyboard */,
+				53B05D3520FED04600F11E26 /* credentials.plist */,
 				CDF9DE2A20FE055200EDD552 /* Info.plist */,
-				CDD4102720FE4ABE00E1852D /* credentials.plist */,
 			);
 			path = "twitter login";
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDF9DE2920FE055200EDD552 /* LaunchScreen.storyboard in Resources */,
-				CDD4102820FE4ABE00E1852D /* credentials.plist in Resources */,
+				53B05D3620FED04600F11E26 /* credentials.plist in Resources */,
 				CDF9DE2620FE055200EDD552 /* Assets.xcassets in Resources */,
 				CDF9DE2420FE055100EDD552 /* Main.storyboard in Resources */,
 			);

@@ -5,8 +5,8 @@ target 'twitter login' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 	pod 'TwitterKit', '3.3.0' 
-  	pod 'GoogleSignIn'
-	pod 'FBSDKLoginKit'
-	pod 'SwiftyJSON', '~> 4.0'
+  	pod 'GoogleSignIn', '4.1.2'
+	pod 'FBSDKLoginKit', '4.34.0'
+	pod 'SwiftyJSON', '4.1.0'
 
 end
