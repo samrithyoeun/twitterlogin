@@ -13,18 +13,30 @@ import FBSDKLoginKit
 import TwitterKit
 import Alamofire
 import OAuthSwift
+import LinkedinSwift
 
 class AuthenticationManager: NSObject {
     static let shared = AuthenticationManager()
     let fbLoginManager = FBSDKLoginManager()
     var googleDelegate: GoogleSignInDelegate?
-    var onGoogleLoginSuccess: (()->Void)?
     var oauthswift: OAuthSwift?
+    var linkedinHelper: LinkedinSwiftHelper?
     
     override init() {
+        
         super.init()
+        
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
+        
+        let linkedInSwitHelperConfiguration = LinkedinSwiftConfiguration(
+            clientId: Config.linkedKey,
+            clientSecret: Config.linkedSecret,
+            state: "DLKDJF45DIWOERCM",
+            permissions: ["r_basicprofile", "r_emailaddress"],
+            redirectUrl: "https://github.com/tonyli508/LinkedinSwift")
+        
+        linkedinHelper = LinkedinSwiftHelper(configuration: linkedInSwitHelperConfiguration!)
     }
     
     func facebookLogin (from uiViewController: UIViewController, completion: @escaping (Result<User>) -> () ) {
@@ -34,7 +46,8 @@ class AuthenticationManager: NSObject {
                     print("athentication: user cancelled Facebook log in ")
                     return
                 } else {
-                    FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, name, picture.type(large)"]).start(completionHandler: { (connection, result, error) -> Void in
+                    FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, name, picture.type(large)"])
+                        .start(completionHandler: { (connection, result, error) -> Void in
                         if (error == nil){
                             let user = self.mapData(result)
                             completion(Result.success(user))
@@ -104,6 +117,18 @@ class AuthenticationManager: NSObject {
         )
     }
     
+    func linkedInLogin(){
+        linkedinHelper?.authorizeSuccess({ (lsToken) -> Void in
+            //Login success lsToken
+            print(lsToken)
+        }, error: { (error) -> Void in
+            print(error)
+            //Encounter error: error.localizedDescription
+        }, cancel: { () -> Void in
+            print("user cancel")
+            //User Cancelled!
+        })
+    }
 }
 
 extension AuthenticationManager: GIDSignInDelegate {
@@ -121,7 +146,6 @@ extension AuthenticationManager: GIDSignInDelegate {
             _ = user.profile.imageURL(withDimension: 200)
             let user = User(name: fullName!, id: userId!, token: token!, email: email!)
             googleDelegate?.googleSignInResponse(user: user)
-            onGoogleLoginSuccess?()
         }
         
     }

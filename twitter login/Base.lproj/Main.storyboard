@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wEQ-4t-nwz">
-                                <rect key="frame" x="30" y="258.5" width="315" height="150"/>
+                                <rect key="frame" x="30" y="238.5" width="315" height="190"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXV-So-u1F">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
@@ -51,6 +51,14 @@
                                         <state key="normal" title="Github"/>
                                         <connections>
                                             <action selector="gitHubButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xir-Fh-hMc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wai-W2-RgP">
+                                        <rect key="frame" x="0.0" y="160" width="315" height="30"/>
+                                        <color key="backgroundColor" red="0.51427664969999998" green="0.51427664969999998" blue="0.51427664969999998" alpha="0.43822238870000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="LinkedIn"/>
+                                        <connections>
+                                            <action selector="linkedInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THT-H4-zQw"/>
                                         </connections>
                                     </button>
                                 </subviews>

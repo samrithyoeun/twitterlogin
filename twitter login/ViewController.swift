@@ -39,6 +39,10 @@ class ViewController: UIViewController {
         AuthenticationManager.shared.gitHubLogIn()
     }
     
+    @IBAction func linkedInButtonTapped(_ sender: Any) {
+        AuthenticationManager.shared.linkedInLogin()
+    }
+    
 }
 
 extension ViewController: GoogleSignInDelegate {

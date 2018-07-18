@@ -11,6 +11,7 @@ import TwitterKit
 import FBSDKLoginKit
 import GoogleSignIn
 import OAuthSwift
+import LinkedinSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,13 +25,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GIDSignIn.sharedInstance().clientID = Config.googleClientId
         return true
     }
-
+    
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         if (url.host == "oauth-callback") {
             OAuthSwift.handle(url: url)
         }
+        
+        if LinkedinSwiftHelper.shouldHandle(url) {
+            return LinkedinSwiftHelper.application(app, open: url, sourceApplication: nil, annotation: nil)
+        }
+        
         _ = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
+        
         TWTRTwitter.sharedInstance().application(app, open: url, options: options)
+        
         return true
     }
     func applicationWillResignActive(_ application: UIApplication) {

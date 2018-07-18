@@ -14,5 +14,6 @@ struct Config {
     static let googleClientId = "394620136419-iom7ound6ilokoetq63v3893ibadj1dt.apps.googleusercontent.com"
     static let githubKey = "809d0206b4c7616d363a"
     static let githubSecret = "904ba5c0e0a2721f0546ae2e54fc730b9cdf4011"
-    
+    static let linkedKey = "814ljc4tbe68jw"
+    static let linkedSecret = "vZPBb9IUVJvvOks6"
 }
