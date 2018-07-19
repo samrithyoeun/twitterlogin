@@ -1,6 +1,6 @@
 # platform :ios, '9.0'
 
-target 'twitter lohttps://www.raywenderlich.com/177597/oauth-2-0-swift-tutorialgin' do
+target 'twitter login' do
 
   use_frameworks!
 	pod 'TwitterKit', '3.3.0' 
@@ -10,5 +10,5 @@ target 'twitter lohttps://www.raywenderlich.com/177597/oauth-2-0-swift-tutorialg
     pod 'Alamofire', '4.7.3'
     pod 'OAuthSwift', '1.2.2'
     pod 'LinkedinSwift', '1.7.7'
-    pod 'SwiftInstagram', '1.1.1'
+    pod 'cloudrail-si-ios-sdk'
 end

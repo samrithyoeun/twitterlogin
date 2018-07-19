@@ -12,14 +12,16 @@ import FBSDKLoginKit
 import GoogleSignIn
 import OAuthSwift
 import LinkedinSwift
+import CloudrailSI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    static let kCloudRailAPIKey = "5b500df73ef31211abdc22d3"
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        CRCloudRail.setAppKey(AppDelegate.kCloudRailAPIKey)
         TWTRTwitter.sharedInstance().start(withConsumerKey: Config.twitterConsumerKey, consumerSecret: Config.twitterConsumerSecret)
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         GIDSignIn.sharedInstance().clientID = Config.googleClientId
