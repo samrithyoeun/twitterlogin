@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		411155029C1F95A3F0D5E31D /* Pods_twitter_login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D53B1E1A6D4990BD4BB56F /* Pods_twitter_login.framework */; };
+		538F12032100728E00A5054B /* UserInfomationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538F12022100728E00A5054B /* UserInfomationController.swift */; };
 		53B05D3620FED04600F11E26 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53B05D3520FED04600F11E26 /* credentials.plist */; };
 		CDBD909D20FE1A180018C26A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD909C20FE1A180018C26A /* User.swift */; };
 		CDBD90A020FE1B530018C26A /* GoogleSignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD909E20FE1B530018C26A /* GoogleSignInDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		272C7D427FD3853BD68E922B /* Pods-twitter login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter login.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twitter login/Pods-twitter login.debug.xcconfig"; sourceTree = "<group>"; };
+		538F12022100728E00A5054B /* UserInfomationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfomationController.swift; sourceTree = "<group>"; };
 		53B05D3520FED04600F11E26 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		7D7E9E6FD1A3AB7966422F63 /* Pods-twitter login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter login.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitter login/Pods-twitter login.release.xcconfig"; sourceTree = "<group>"; };
 		CDBD909C20FE1A180018C26A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				CDF9DE2020FE055100EDD552 /* ViewController.swift */,
+				538F12022100728E00A5054B /* UserInfomationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				538F12032100728E00A5054B /* UserInfomationController.swift in Sources */,
 				CDBD909D20FE1A180018C26A /* User.swift in Sources */,
 				CDF9DE2120FE055100EDD552 /* ViewController.swift in Sources */,
 				CDF9DE1F20FE055100EDD552 /* AppDelegate.swift in Sources */,

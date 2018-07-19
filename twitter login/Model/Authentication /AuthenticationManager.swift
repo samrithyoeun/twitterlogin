@@ -23,7 +23,11 @@ class AuthenticationManager: NSObject {
     var oauthswift: OAuthSwift?
     var linkedinHelper: LinkedinSwiftHelper?
     var instagram = Instagram.init(clientId: Config.instagramKey, clientSecret: Config.instagramSecret)
+    var twitter = Twitter.init(clientId: Config.twitterConsumerKey, clientSecret: Config.twitterConsumerSecret)
+    var github = GitHub.init(clientId: Config.githubKey, clientSecret: Config.githubSecret)
+    var linkedin = LinkedIn.init(clientId: Config.linkedKey, clientSecret: Config.linkedSecret)
     
+    typealias ResponseUser = ( (_ user: User) -> () )
     override init() {
         
         super.init()
@@ -51,7 +55,10 @@ class AuthenticationManager: NSObject {
                     FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, name, picture.type(large)"])
                         .start(completionHandler: { (connection, result, error) -> Void in
                         if (error == nil){
-                            let user = self.mapData(result)
+                            var user = self.mapData(result)
+                            print("facebook authentication")
+                            print(user)
+                            user.token = FBSDKAccessToken.current().tokenString
                             completion(Result.success(user))
                         } else {
                             completion(Result.failure("authenticaton: cannot get the user data from Facebook"))
@@ -62,10 +69,6 @@ class AuthenticationManager: NSObject {
         }
     }
     
-    func facebookLogOut(){
-        fbLoginManager.logOut()
-    }
-
     func mapData(_ value: Any?) -> User {
         let json = JSON(value ?? "")
         let id = json["id"].stringValue
@@ -77,6 +80,7 @@ class AuthenticationManager: NSObject {
     
     func googleSignIn() {
         GIDSignIn.sharedInstance().signIn()
+        
     }
     
     func googleSignOut() {
@@ -97,60 +101,88 @@ class AuthenticationManager: NSObject {
             }
         })
     }
-
-    func gitHubLogIn() {
-        let oauthswift = OAuth2Swift(
-            consumerKey:    Config.githubKey,
-            consumerSecret: Config.githubSecret,
-            authorizeUrl:   "https://github.com/login/oauth/authorize",
-            accessTokenUrl: "https://github.com/login/oauth/access_token",
-            responseType:   "code"
-        )
-        self.oauthswift = oauthswift
-        let state = generateState(withLength: 20)
-        let _ = oauthswift.authorize(
-            withCallbackURL: URL(string: "oauth-swift://oauth-callback/github")!, scope: "user,repo", state: state,
-            success: { credential, response, parameters in
-                print("success \(credential)")
-        },
-            failure: { error in
-                print(error.description)
+    
+    func twitterUniversalLogin(){
+            let oauthswift = OAuth1Swift(
+                consumerKey: Config.twitterConsumerKey,
+                consumerSecret: Config.twitterConsumerSecret,
+                requestTokenUrl: "https://api.twitter.com/oauth/request_token",
+                authorizeUrl:    "https://api.twitter.com/oauth/authorize",
+                accessTokenUrl:  "https://api.twitter.com/oauth/access_token"
+            )
+            self.oauthswift = oauthswift
+            let _ = oauthswift.authorize(
+                withCallbackURL: URL(string: "http://oauthswift.herokuapp.com/callback/twitter")!,
+                success: { credential, response, parameters in
+                    print("credential")
+                    print(credential)
+            },
+                failure: { error in
+                    print(error.description)
+            }
+            )
         }
-        )
-    }
     
-    func linkedInLogin(){
-        linkedinHelper?.authorizeSuccess({ (lsToken) -> Void in
-            //Login success lsToken
-            print(lsToken)
-        }, error: { (error) -> Void in
+        func testTwitter(_ oauthswift: OAuth1Swift) {
+            let _ = oauthswift.client.get(
+                "https://api.twitter.com/1.1/statuses/mentions_timeline.json", parameters: [:],
+                success: { response in
+                    let jsonDict = try? response.jsonObject()
+                    print(String(describing: jsonDict))
+            }, failure: { error in
+                print(error)
+            }
+            )
+        }
+    
+    
+    func gitHubLogIn(callback: ResponseUser) {
+        do {
+            try github.login()
+            let name  = try github.fullName()
+            let id = try github.identifier()
+            let email = try github.email()
+            let user = User(name: name, id: id, token: "", email: email)
+            print("github user")
+            print(user)
+            callback(user)
+        } catch let error {
+            print("github error")
             print(error)
-            //Encounter error: error.localizedDescription
-        }, cancel: { () -> Void in
-            print("user cancel")
-            //User Cancelled!
-        })
+        }
     }
     
-    func instagramLogin(){
+    func linkedInLogin(callback: ResponseUser) {
+        do {
+            try linkedin.login()
+            let name  = try linkedin.fullName()
+            let email = try linkedin.email()
+            let id = try linkedin.identifier()
+            let credential = try linkedin.saveAsString()
+            let user = User(name: name, id: id, token: credential, email: email)
+            print(user)
+            callback(user)
+        } catch let error {
+            print("linked error")
+            print(error)
+        }
+    }
+    
+    func instagramLogin(callback: ResponseUser){
         do {
             try instagram.login()
-            print("success")
-            print(try instagram.fullName())
+            let name  = try instagram.fullName()
+            let id = try instagram.identifier()
+            let email = try instagram.email()
+            let user = User(name: name, id: id, token: "", email: email)
+            print(user)
+            callback(user)
         } catch let error {
-            print("instagramerror")
+            print("instagram error")
             print(error)
         }
     }
     
-    func instagramLogout(){
-        do {
-            try instagram.logout()
-        } catch let error {
-            print("instagramerror")
-            print(error)
-        }
-    }
 }
 
 extension AuthenticationManager: GIDSignInDelegate {

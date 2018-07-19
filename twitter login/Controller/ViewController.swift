@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         AuthenticationManager.shared.googleDelegate = self
         
         AuthenticationManager.shared.googleSignOut()
-        AuthenticationManager.shared.instagramLogout()
     }
 
     @IBAction func facebookButtonTapped(_ sender: Any) {
@@ -35,27 +34,39 @@ class ViewController: UIViewController {
     }
     
     @IBAction func twitterButtonTapped(_ sender: Any) {
-        AuthenticationManager.shared.twitterLogin()
+        AuthenticationManager.shared.twitterUniversalLogin()
     }
     
     @IBAction func gitHubButtonTapped(_ sender: Any) {
-        AuthenticationManager.shared.gitHubLogIn()
+        AuthenticationManager.shared.gitHubLogIn { (user) in
+            loginWithUser(user)
+        }
     }
     
     @IBAction func linkedInButtonTapped(_ sender: Any) {
-        AuthenticationManager.shared.linkedInLogin()
+        AuthenticationManager.shared.linkedInLogin{ (user) in
+            loginWithUser(user)
+        }
     }
     
    
     @IBAction func instagramButtonTapped(_ sender: Any) {
-        AuthenticationManager.shared.instagramLogin()
+        AuthenticationManager.shared.instagramLogin{ (user) in
+            loginWithUser(user)
+        }
     }
     
+    private func loginWithUser(_ user: User) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let userInfoVC = storyBoard.instantiateViewController(withIdentifier: "userInfoViewController") as! UserInfomationController
+        userInfoVC.user = user
+        self.present(userInfoVC, animated: true, completion: nil)
+    }
 }
 
 extension ViewController: GoogleSignInDelegate {
     func googleSignInResponse(user: User) {
-        print(user)
+        loginWithUser(user)
     }
     
     func googleSignInLaunch(_ viewController: UIViewController) {

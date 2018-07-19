@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,75 +15,242 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="twitter_login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wEQ-4t-nwz">
-                                <rect key="frame" x="30" y="218.5" width="315" height="230"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXV-So-u1F">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
-                                        <color key="backgroundColor" red="0.51427664969999998" green="0.51427664969999998" blue="0.51427664969999998" alpha="0.43822238870000002" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Twitter"/>
-                                        <connections>
-                                            <action selector="twitterButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9pt-lD-B4l"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5s-25-qAX">
-                                        <rect key="frame" x="0.0" y="40" width="315" height="30"/>
-                                        <color key="backgroundColor" red="0.51427664969999998" green="0.51427664969999998" blue="0.51427664969999998" alpha="0.43822238870000002" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Facebook"/>
-                                        <connections>
-                                            <action selector="facebookButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DMx-KQ-AfF"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyf-Cb-LsS">
-                                        <rect key="frame" x="0.0" y="80" width="315" height="30"/>
-                                        <color key="backgroundColor" red="0.51427664969999998" green="0.51427664969999998" blue="0.51427664969999998" alpha="0.43822238870000002" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Google"/>
-                                        <connections>
-                                            <action selector="googleButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LWv-Xu-3rR"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID9-fU-GPO">
-                                        <rect key="frame" x="0.0" y="120" width="315" height="30"/>
-                                        <color key="backgroundColor" red="0.51427664969999998" green="0.51427664969999998" blue="0.51427664969999998" alpha="0.43822238870000002" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Github"/>
-                                        <connections>
-                                            <action selector="gitHubButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xir-Fh-hMc"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wai-W2-RgP">
-                                        <rect key="frame" x="0.0" y="160" width="315" height="30"/>
-                                        <color key="backgroundColor" red="0.51427664969999998" green="0.51427664969999998" blue="0.51427664969999998" alpha="0.43822238870000002" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="LinkedIn"/>
-                                        <connections>
-                                            <action selector="linkedInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THT-H4-zQw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7w-bH-OG7">
-                                        <rect key="frame" x="0.0" y="200" width="315" height="30"/>
-                                        <color key="backgroundColor" red="0.51427664969999998" green="0.51427664969999998" blue="0.51427664969999998" alpha="0.43822238870000002" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Instagram"/>
-                                        <connections>
-                                            <action selector="instagramButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1BF-3s-IcG"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXV-So-u1F">
+                                <rect key="frame" x="30" y="148" width="260" height="40"/>
+                                <color key="backgroundColor" red="0.1019607843" green="0.59215686270000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6RL-P5-Zb1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Twitter">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9pt-lD-B4l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5s-25-qAX">
+                                <rect key="frame" x="30" y="196" width="260" height="40"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lBJ-9M-bS9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DMx-KQ-AfF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyf-Cb-LsS">
+                                <rect key="frame" x="30" y="244" width="260" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="j45-44-Zfa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Google">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="googleButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LWv-Xu-3rR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID9-fU-GPO">
+                                <rect key="frame" x="30" y="292" width="260" height="40"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rMa-QW-wuL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Github">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="gitHubButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xir-Fh-hMc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wai-W2-RgP">
+                                <rect key="frame" x="30" y="340" width="260" height="40"/>
+                                <color key="backgroundColor" red="0.1764705882" green="0.27450980390000002" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Q0e-oU-TPx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="LinkedIn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="linkedInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THT-H4-zQw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7w-bH-OG7">
+                                <rect key="frame" x="30" y="388" width="260" height="40"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.1960784314" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RIm-cb-NiK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Instagram">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="instagramButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1BF-3s-IcG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Authentication " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8Q-JN-gJZ">
+                                <rect key="frame" x="30" y="68" width="260" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="poT-VM-BFa">
+                                <rect key="frame" x="38.5" y="156.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Cq4-cM-53s"/>
+                                    <constraint firstAttribute="width" constant="25" id="yJ4-qb-KqK"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="m62-AR-wc0">
+                                <rect key="frame" x="38.5" y="204.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="JE1-7m-fjL"/>
+                                    <constraint firstAttribute="width" constant="25" id="WR1-vw-Myu"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="xfU-tO-BOE">
+                                <rect key="frame" x="38.5" y="252.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Jap-gi-0nT"/>
+                                    <constraint firstAttribute="width" constant="25" id="StA-DA-4FQ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="git" translatesAutoresizingMaskIntoConstraints="NO" id="1cQ-nm-A5B">
+                                <rect key="frame" x="38.5" y="300.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="QJ4-nw-OfP"/>
+                                    <constraint firstAttribute="width" constant="25" id="lSw-s2-U6O"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="r47-9d-M3Z">
+                                <rect key="frame" x="38" y="348.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Hng-gG-T7D"/>
+                                    <constraint firstAttribute="width" constant="25" id="q8W-Xj-4we"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="zaQ-3k-hiG">
+                                <rect key="frame" x="38.5" y="396.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="fc6-9J-sgT"/>
+                                    <constraint firstAttribute="height" constant="25" id="ujr-DC-pqb"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wEQ-4t-nwz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4G8-Ks-QFG"/>
-                            <constraint firstItem="wEQ-4t-nwz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XIh-Vu-gjq"/>
-                            <constraint firstItem="wEQ-4t-nwz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eZ2-Hy-9UF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wEQ-4t-nwz" secondAttribute="trailing" constant="30" id="n2I-Xg-tGv"/>
+                            <constraint firstItem="p7w-bH-OG7" firstAttribute="top" secondItem="wai-W2-RgP" secondAttribute="bottom" constant="8" id="4oX-aP-MiT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ID9-fU-GPO" secondAttribute="trailing" constant="30" id="4yy-Rp-rxd"/>
+                            <constraint firstItem="wXV-So-u1F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="5b4-tz-MxS"/>
+                            <constraint firstItem="B8Q-JN-gJZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="AXi-3e-kj5"/>
+                            <constraint firstItem="x5s-25-qAX" firstAttribute="top" secondItem="wXV-So-u1F" secondAttribute="bottom" constant="8" id="DCC-Rs-CKx"/>
+                            <constraint firstItem="ID9-fU-GPO" firstAttribute="top" secondItem="Vyf-Cb-LsS" secondAttribute="bottom" constant="8" id="DdE-7u-If4"/>
+                            <constraint firstItem="p7w-bH-OG7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="HDu-pb-oF0"/>
+                            <constraint firstItem="r47-9d-M3Z" firstAttribute="top" secondItem="wai-W2-RgP" secondAttribute="top" constant="8.5" id="Jff-qA-pzN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vyf-Cb-LsS" secondAttribute="trailing" constant="30" id="L9l-QF-zzK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B8Q-JN-gJZ" secondAttribute="trailing" constant="30" id="QWD-ei-mhH"/>
+                            <constraint firstItem="1cQ-nm-A5B" firstAttribute="leading" secondItem="ID9-fU-GPO" secondAttribute="leading" constant="8.5" id="SDR-rv-RuM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wai-W2-RgP" secondAttribute="trailing" constant="30" id="VcN-aQ-Ay6"/>
+                            <constraint firstItem="x5s-25-qAX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Vw6-TG-7I3"/>
+                            <constraint firstItem="poT-VM-BFa" firstAttribute="top" secondItem="wXV-So-u1F" secondAttribute="top" constant="8.5" id="WYE-wv-R7t"/>
+                            <constraint firstItem="poT-VM-BFa" firstAttribute="leading" secondItem="wXV-So-u1F" secondAttribute="leading" constant="8.5" id="Y58-Cb-MIN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x5s-25-qAX" secondAttribute="trailing" constant="30" id="bNq-wd-kgA"/>
+                            <constraint firstItem="wai-W2-RgP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="cFX-Cg-fh2"/>
+                            <constraint firstItem="wai-W2-RgP" firstAttribute="top" secondItem="ID9-fU-GPO" secondAttribute="bottom" constant="8" id="cP5-8p-T6Y"/>
+                            <constraint firstItem="m62-AR-wc0" firstAttribute="leading" secondItem="x5s-25-qAX" secondAttribute="leading" constant="8.5" id="drG-2A-gwC"/>
+                            <constraint firstItem="zaQ-3k-hiG" firstAttribute="leading" secondItem="p7w-bH-OG7" secondAttribute="leading" constant="8.5" id="eYH-4i-Rey"/>
+                            <constraint firstItem="xfU-tO-BOE" firstAttribute="leading" secondItem="Vyf-Cb-LsS" secondAttribute="leading" constant="8.5" id="hZy-fN-v5J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wXV-So-u1F" secondAttribute="trailing" constant="30" id="l9D-Fs-lRN"/>
+                            <constraint firstItem="r47-9d-M3Z" firstAttribute="leading" secondItem="wai-W2-RgP" secondAttribute="leading" constant="8.5" id="mKd-3g-9t8"/>
+                            <constraint firstItem="zaQ-3k-hiG" firstAttribute="top" secondItem="p7w-bH-OG7" secondAttribute="top" constant="8.5" id="nJ5-cI-En4"/>
+                            <constraint firstItem="m62-AR-wc0" firstAttribute="top" secondItem="x5s-25-qAX" secondAttribute="top" constant="8.5" id="oIb-ma-zJg"/>
+                            <constraint firstItem="xfU-tO-BOE" firstAttribute="top" secondItem="Vyf-Cb-LsS" secondAttribute="top" constant="8.5" id="oO6-8A-DeV"/>
+                            <constraint firstItem="Vyf-Cb-LsS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="rUE-iJ-uSw"/>
+                            <constraint firstItem="Vyf-Cb-LsS" firstAttribute="top" secondItem="x5s-25-qAX" secondAttribute="bottom" constant="8" id="rXa-dg-Sbm"/>
+                            <constraint firstItem="wXV-So-u1F" firstAttribute="top" secondItem="B8Q-JN-gJZ" secondAttribute="bottom" constant="50" id="wBa-9f-nnV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p7w-bH-OG7" secondAttribute="trailing" constant="30" id="xJP-23-YRC"/>
+                            <constraint firstItem="ID9-fU-GPO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xqR-FN-ZV4"/>
+                            <constraint firstItem="1cQ-nm-A5B" firstAttribute="top" secondItem="ID9-fU-GPO" secondAttribute="top" constant="8.5" id="yBi-Od-SEs"/>
+                            <constraint firstItem="B8Q-JN-gJZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="zGc-8j-Ma4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-436.875" y="-177.46478873239437"/>
+        </scene>
+        <!--User Infomation Controller-->
+        <scene sceneID="TKE-UX-iNp">
+            <objects>
+                <viewController storyboardIdentifier="userInfoViewController" id="Y3o-eQ-Ebs" customClass="UserInfomationController" customModule="twitter_login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tmd-gC-PvT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xnr-69-UPh">
+                                <rect key="frame" x="30" y="244" width="260" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have logged in with: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cr9-1w-oju">
+                                        <rect key="frame" x="35" y="0.0" width="190" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2f-WL-otC">
+                                        <rect key="frame" x="0.0" y="50" width="260" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Sign out">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Kfg-Ca-Cxd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="q2f-WL-otC" secondAttribute="trailing" id="bFM-XR-GHv"/>
+                                    <constraint firstItem="q2f-WL-otC" firstAttribute="leading" secondItem="xnr-69-UPh" secondAttribute="leading" id="ie1-F0-SAo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xnr-69-UPh" firstAttribute="leading" secondItem="9gD-WE-c9h" secondAttribute="leading" constant="30" id="AaW-fO-0UR"/>
+                            <constraint firstItem="xnr-69-UPh" firstAttribute="centerX" secondItem="tmd-gC-PvT" secondAttribute="centerX" id="KlA-ni-thr"/>
+                            <constraint firstItem="xnr-69-UPh" firstAttribute="centerY" secondItem="tmd-gC-PvT" secondAttribute="centerY" id="Qbd-2r-Old"/>
+                            <constraint firstItem="9gD-WE-c9h" firstAttribute="trailing" secondItem="xnr-69-UPh" secondAttribute="trailing" constant="30" id="wpn-eQ-nT7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9gD-WE-c9h"/>
+                    </view>
+                    <connections>
+                        <outlet property="informationLabel" destination="Cr9-1w-oju" id="LUg-wB-f66"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FjE-jP-xau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="-178"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebook" width="64" height="64"/>
+        <image name="git" width="64" height="64"/>
+        <image name="google" width="64" height="64"/>
+        <image name="linkedin" width="64" height="64"/>
+        <image name="twitter" width="64" height="64"/>
+    </resources>
 </document>
